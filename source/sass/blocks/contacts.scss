@@ -1,0 +1,35 @@
+.contacts__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+}
+
+.contacts__item {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444444;
+}
+
+.contacts__email {
+  color: #444444;
+  border-bottom: 1px solid #62d1ba;
+  &:hover {
+    color: #46c1ae;
+    border-bottom: 1px solid #46c1ae;
+  }
+  &:active {
+    color: rgba(70, 193, 174, 0.3);
+    border-bottom: 1px solid rgba(70, 193, 174, 0.3);
+  }
+}
+
+.contacts__btn {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #444444;
+  text-transform: uppercase;
+  border: 2px solid #444444;
+}

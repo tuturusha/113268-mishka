@@ -1,0 +1,35 @@
+.reviews__title {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #000000;
+
+}
+
+.reiviews__text {
+  color: #444444;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.reviews__author {
+  font-style: normal;
+  font-size: 17px;
+  &-name {
+    color: #000000;
+    font-weight: bold;
+  }
+  &-hashtag {
+    color: #444444;
+    font-weight: normal;
+  }
+}
+
+.reviews__btn {
+ color: #444444;
+ border: 2px solid #444444;
+ text-transform: uppercase;
+ font-size: 18px;
+ line-height: 20px;
+}

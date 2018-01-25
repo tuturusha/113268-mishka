@@ -1,0 +1,39 @@
+@import "normalize.scss";
+
+@import "blocks/page-header.scss";
+
+@import "blocks/main-nav.scss";
+
+@import "blocks/category.scss";
+
+@import "blocks/product-week.scss";
+
+@import "blocks/about-us.scss";
+
+@import "blocks/reviews.scss";
+
+@import "blocks/contacts.scss";
+
+@import "blocks/page-footer.scss";
+
+@import "blocks/modal.scss";
+
+@import "blocks/goods.scss";
+
+@import "blocks/production.scss";
+
+@import "blocks/promo-text.scss";
+
+@import "blocks/order-form.scss";
+
+body {
+  font-family: "Open-sans", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  text-transform: uppercase;
+}
