@@ -1,18 +1,16 @@
 .category__list {
-  list-style: none;
+  @include list-style();
 }
 .category__item {
-  background-color: #56c3b2;
+  background-color: $primary-color-dark;
   &--light {
-    background-color: #63d1bb;
+    background-color: $primary-color;
   }
 }
 .category__link {
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: bold;
+  color: $white;
+  @include font-set($weight, $font-size-link, $line-height-title);
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: $black-light;
   }
 }

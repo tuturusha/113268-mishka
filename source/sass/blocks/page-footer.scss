@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: #f1f1f1;
+  background-color: $bg-color;
 }
 
 .social {
@@ -7,12 +7,10 @@
 }
 
 .social__list {
-  list-style: none;
+  @include list-style();
 }
 
 .copyright__text {
-  font-size: 19px;
-  line-height: 18px;
-  font-weight: bold;
-  color: #000000;
+  @include font-set($weight, $font-size-text, $line-height-medium);
+  color: $black;
 }

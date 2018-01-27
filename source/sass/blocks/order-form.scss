@@ -3,37 +3,28 @@
 }
 
 .order-form__title {
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 16px;
-  color: #63d1bb;
-  text-transform: uppercase;
+  @include font-set($weight, $font-size-label, $line-height-btn);
+  color: $primary-color;
 }
 
 .order-form__label-radio,
 .order-form__label-check,
 .order-form__label {
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 18px;
-  color: #000000;
+  @include font-set($weight, $font-size-label, $line-height-medium);
+  color: $black;
 }
 
 .order-form__list {
-  list-style: none;
+  @include list-style();
 }
 
 .order-form__item-comment {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: normal;
-  color: #444444;
+  @include font-set($weight-regular, $font-size-comment, $line-height-btn);
+  color: $grey;
 }
 
 .order-form__btn {
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 16px;
-  color: #444444;
+  @include font-set($weight, $font-size-label, $line-height-btn);
+  color: $grey;
   border: 2px solid #444444;
 }

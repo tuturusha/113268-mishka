@@ -1,6 +1,4 @@
 .promo-text {
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 24px;
-  color: #444444;
+  @mixin font-set($weight-regular, $font-size-mini, $line-height-modal);
+  color: $grey;
 }

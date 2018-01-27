@@ -1,19 +1,15 @@
 .contacts__title {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  color: #000000;
+  @include font-set($weight, $font-size-medium, $line-height-title);
+  color: $black;
 }
 
 .contacts__item {
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: normal;
-  color: #444444;
+  @include font-set($weight-regular, $font-size-reviews, $line-height-title);
+  color: $grey;
 }
 
 .contacts__email {
-  color: #444444;
+  color: $grey;
   border-bottom: 1px solid #62d1ba;
   &:hover {
     color: #46c1ae;
@@ -26,10 +22,7 @@
 }
 
 .contacts__btn {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #444444;
-  text-transform: uppercase;
+  @include font-set($weight, $font-size-medium, $line-height-text);
+  color: $grey;
   border: 2px solid #444444;
 }

@@ -1,16 +1,13 @@
 .about-us__title {
-  font-size: 25px;
   line-height: 30px;
-  font-weight: bold;
-  color: #000000;
+  @include font-set($weight, $font-size-menu, $line-height-title);
+  color: $black;
 }
 
 .about-us__list {
-  list-style: none;
+  @include list-style();
 }
 
 .about-us__item {
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 20px;
+  @include font-set($weight, $font-size-label, $line-height-text);
 }

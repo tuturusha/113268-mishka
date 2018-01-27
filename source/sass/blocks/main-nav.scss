@@ -1,5 +1,5 @@
 .main-nav__list {
-  list-style: none;
+  @include list-style();
 }
 
 .main-nav__item {
@@ -7,10 +7,8 @@
 }
 
 .main-nav__link {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
-  color: #000000;
+  @include font-set($weight, $font-size-label, $line-height-modal);
+  color: $black;
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }

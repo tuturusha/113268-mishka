@@ -1,22 +1,16 @@
 .product-week__title {
-  font-size: 25px;
-  font-weight: bold;
-  line-height: 30px;
-  color: #000000;
+  @include font-set($weight, $font-size-menu, $line-height-title);
+  color: $black;
 }
 
 .product-week__label {
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #63d1bb;
+  @include font-set($weight, $font-size-label, $line-height-text);
+  color: $primary-color;
 }
 
 .product-week__content {
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 24px;
-  color: #444444;
+  @include font-set($weight-regular, $font-size-reviews, $line-height-modal);
+  color: $grey;
 }
 
 .product-week__table {
@@ -29,24 +23,20 @@
 }
 
 .product-week__price {
-  font-size: 17px;
-  line-height: 24px;
-  color: #444444;
+  @include font-set($weight, $font-size-label, $line-height-modal);
+  color: $grey;
 }
 
 .product-week__btn {
-  font-size: 17px;
-  line-height: 20px;
-  color: #444444;
+  @include font-set($weight, $font-size-label, $line-height-text);
+  color: $grey;
   border: 2px solid #444444;
-  text-transform: uppercase;
-  font-weight: bold;
   &:hover {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: $grey;
+    color: $white;
   }
   &:active {
-    background-color: #444444;
+    background-color: $grey;
     color: rgba(255, 255, 255, 0.3);
   }
 }

@@ -4,7 +4,7 @@
 }
 
 .goods__list {
-  list-style: none;
+  @include list-style();
 }
 
 .goods-item__header,
@@ -13,22 +13,16 @@
 }
 
 .goods-item__title {
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 24px;
-  color: #000000;
+  @include font-set($weight, $font-size-label, $line-height-modal);
+  color: $black;
 }
 
 .goods-item__text {
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 30px;
-  color: #444444;
+  @include font-set($weight-regular, $font-size-mini, $line-height-title);
+  color: $grey;
 }
 
 .goods-item__price {
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 24px;
-  color: #000000;
+  @include font-set($weight, $font-size-reviews, $line-height-modal);
+  color: $black;
 }
