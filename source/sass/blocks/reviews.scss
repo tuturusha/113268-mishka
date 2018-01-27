@@ -1,0 +1,29 @@
+.reviews__title {
+  @include font-set($weight, $font-size-menu, $line-height-title);
+  color: $black;
+
+}
+
+.reiviews__text {
+  @include font-set($weight-regular, $font-size-reviews, $line-height-title);
+  color: $grey;
+}
+
+.reviews__author {
+  font-style: $weight-regular;
+  font-size: $font-size-label;
+  &-name {
+    color: $black;
+    font-weight: $weight;
+  }
+  &-hashtag {
+    color: $grey;
+    font-weight: $weight-regular;
+  }
+}
+
+.reviews__btn {
+  @include font-set($weight-regular, $font-size-medium, $line-height-text);
+  color: $grey;
+  border: 2px solid #444444;
+}

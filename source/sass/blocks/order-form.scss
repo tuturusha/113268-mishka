@@ -1,0 +1,30 @@
+.order-form__item {
+  border: none;
+}
+
+.order-form__title {
+  @include font-set($weight, $font-size-label, $line-height-btn);
+  color: $primary-color;
+}
+
+.order-form__label-radio,
+.order-form__label-check,
+.order-form__label {
+  @include font-set($weight, $font-size-label, $line-height-medium);
+  color: $black;
+}
+
+.order-form__list {
+  @include list-style();
+}
+
+.order-form__item-comment {
+  @include font-set($weight-regular, $font-size-comment, $line-height-btn);
+  color: $grey;
+}
+
+.order-form__btn {
+  @include font-set($weight, $font-size-label, $line-height-btn);
+  color: $grey;
+  border: 2px solid #444444;
+}

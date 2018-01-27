@@ -1,0 +1,29 @@
+body {
+  font-family: $main-font;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  font-family: $main-font;
+  @include font-set($weight-regular, $font-size-reviews, $line-height-modal);
+  color: $grey;
+  background-color: $white;
+}

@@ -1,0 +1,4 @@
+.promo-text {
+  @mixin font-set($weight-regular, $font-size-mini, $line-height-modal);
+  color: $grey;
+}

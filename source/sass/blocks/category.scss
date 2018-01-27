@@ -1,0 +1,16 @@
+.category__list {
+  @include list-style();
+}
+.category__item {
+  background-color: $primary-color-dark;
+  &--light {
+    background-color: $primary-color;
+  }
+}
+.category__link {
+  color: $white;
+  @include font-set($weight, $font-size-link, $line-height-title);
+  &:active {
+    color: $black-light;
+  }
+}

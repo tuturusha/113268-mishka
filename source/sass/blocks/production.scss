@@ -1,0 +1,21 @@
+.production {
+  border-left: 2px solid #ececec;
+  border-right: 2px solid #ececec;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+.production__title {
+  @include font-set($weight, $font-size-label, $line-height-modal);
+  color: $black;
+}
+
+.production__info {
+  @include font-set($weight-regular, $font-size-mini, $line-height-modal);
+  color: $grey;
+}
+
+.production__button {
+  @include font-set($weight, $font-size-label, $line-height-btn);
+  color: $grey;
+  border: 2px solid #444444;
+}

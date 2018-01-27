@@ -1,0 +1,16 @@
+.page-footer {
+  background-color: $bg-color;
+}
+
+.social {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.social__list {
+  @include list-style();
+}
+
+.copyright__text {
+  @include font-set($weight, $font-size-text, $line-height-medium);
+  color: $black;
+}
