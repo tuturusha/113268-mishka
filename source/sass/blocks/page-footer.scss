@@ -11,6 +11,6 @@
 }
 
 .copyright__text {
-  @include font-set($weight, $font-size-text, $line-height-medium);
+  @include font-set($font-size-text, $line-height-medium, $weight);
   color: $black;
 }

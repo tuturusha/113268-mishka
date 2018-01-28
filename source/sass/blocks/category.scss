@@ -9,7 +9,7 @@
 }
 .category__link {
   color: $white;
-  @include font-set($weight, $font-size-link, $line-height-title);
+  @include font-set( $font-size-link, $line-height-title, $weight);
   &:active {
     color: $black-light;
   }

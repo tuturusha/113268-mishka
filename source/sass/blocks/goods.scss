@@ -1,6 +1,6 @@
 .goods-item {
-  border-left: 2px solid #ececec;
-  border-right: 2px solid #ececec;
+  border-left: 2px solid $grey-light;
+  border-right: 2px solid $grey-light;
 }
 
 .goods__list {
@@ -9,20 +9,20 @@
 
 .goods-item__header,
 .goods-item__footer {
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid $grey-light;
 }
 
 .goods-item__title {
-  @include font-set($weight, $font-size-label, $line-height-modal);
+  @include font-set($font-size-label, $line-height-modal, $weight);
   color: $black;
 }
 
 .goods-item__text {
-  @include font-set($weight-regular, $font-size-mini, $line-height-title);
+  @include font-set($font-size-mini, $line-height-title);
   color: $grey;
 }
 
 .goods-item__price {
-  @include font-set($weight, $font-size-reviews, $line-height-modal);
+  @include font-set($font-size-reviews, $line-height-modal, $weight);
   color: $black;
 }

@@ -1,11 +1,11 @@
 .page-header__title {
-  @include font-set($weight, $font-size-title, $line-height-title);
+  @include font-set($font-size-title, $line-height-title, $weight);
   color: $black;
 }
 
 .page-header__top {
-  border-top: 2px solid #ececec;
-  border-bottom: 2px solid #ececec;
+  border-top: 2px solid $grey-light;
+  border-bottom: 2px solid $grey-light;
 }
 
 .page-header__intro {

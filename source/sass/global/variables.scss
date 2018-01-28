@@ -1,4 +1,6 @@
-$main-font: "Open-sans", Arial, sans-serif;
+$width-mobile: 320px;
+$width-tablet: 768px;
+$width-desktop: 1150px;
 
 $font-size-title: 27px;
 $font-size-menu: 25px;
@@ -17,7 +19,7 @@ $line-height-medium: 18px;
 $line-height-btn: 16px;
 
 $weight: bold;
-$weight-regular: normal;
+$main-font: "Open-sans", Arial, sans-serif;
 
 $black: #000000;
 $black-light: rgba(255, 255, 255, 0.3);

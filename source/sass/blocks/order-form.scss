@@ -3,14 +3,14 @@
 }
 
 .order-form__title {
-  @include font-set($weight, $font-size-label, $line-height-btn);
+  @include font-set($font-size-label, $line-height-btn, $weight);
   color: $primary-color;
 }
 
 .order-form__label-radio,
 .order-form__label-check,
 .order-form__label {
-  @include font-set($weight, $font-size-label, $line-height-medium);
+  @include font-set($font-size-label, $line-height-medium, $weight);
   color: $black;
 }
 
@@ -19,12 +19,12 @@
 }
 
 .order-form__item-comment {
-  @include font-set($weight-regular, $font-size-comment, $line-height-btn);
+  @include font-set($font-size-comment, $line-height-btn);
   color: $grey;
 }
 
 .order-form__btn {
-  @include font-set($weight, $font-size-label, $line-height-btn);
+  @include font-set($font-size-label, $line-height-btn, $weight);
   color: $grey;
-  border: 2px solid #444444;
+  border: 2px solid $grey;
 }

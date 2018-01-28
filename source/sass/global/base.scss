@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-width: $width-mobile;
+  min-height: 100vh;
+  word-wrap: break-word;
+  font-family: $main-font;
+  @include font-set($font-size-reviews, $line-height-modal);
+  color: $grey;
+  background-color: $white;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: $width-tablet) {
+
+}
+
+@media (min-width: $width-desktop) {
+
+  }

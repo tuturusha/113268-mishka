@@ -1,10 +1,10 @@
 .contacts__title {
-  @include font-set($weight, $font-size-medium, $line-height-title);
+  @include font-set( $font-size-medium, $line-height-title, $weight);
   color: $black;
 }
 
 .contacts__item {
-  @include font-set($weight-regular, $font-size-reviews, $line-height-title);
+  @include font-set($font-size-reviews, $line-height-title);
   color: $grey;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .contacts__btn {
-  @include font-set($weight, $font-size-medium, $line-height-text);
+  @include font-set($font-size-medium, $line-height-text, $weight);
   color: $grey;
-  border: 2px solid #444444;
+  border: 2px solid $grey;
 }

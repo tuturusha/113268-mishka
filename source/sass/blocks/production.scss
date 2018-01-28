@@ -1,21 +1,21 @@
 .production {
-  border-left: 2px solid #ececec;
-  border-right: 2px solid #ececec;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
+  border-left: 2px solid $grey-light;
+  border-right: 2px solid $grey-light;
+  border-top: 1px solid $grey-light;
+  border-bottom: 1px solid $grey-light;
 }
 .production__title {
-  @include font-set($weight, $font-size-label, $line-height-modal);
+  @include font-set($font-size-label, $line-height-modal, $weight);
   color: $black;
 }
 
 .production__info {
-  @include font-set($weight-regular, $font-size-mini, $line-height-modal);
+  @include font-set($font-size-mini, $line-height-modal);
   color: $grey;
 }
 
 .production__button {
-  @include font-set($weight, $font-size-label, $line-height-btn);
+  @include font-set($font-size-label, $line-height-btn, $weight);
   color: $grey;
-  border: 2px solid #444444;
+  border: 2px solid $grey;
 }

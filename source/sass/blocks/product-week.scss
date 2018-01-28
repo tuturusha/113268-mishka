@@ -1,15 +1,15 @@
 .product-week__title {
-  @include font-set($weight, $font-size-menu, $line-height-title);
+  @include font-set($font-size-menu, $line-height-title, $weight);
   color: $black;
 }
 
 .product-week__label {
-  @include font-set($weight, $font-size-label, $line-height-text);
+  @include font-set($font-size-label, $line-height-text, $weight);
   color: $primary-color;
 }
 
 .product-week__content {
-  @include font-set($weight-regular, $font-size-reviews, $line-height-modal);
+  @include font-set($font-size-reviews, $line-height-modal);
   color: $grey;
 }
 
@@ -19,18 +19,18 @@
 
 .product-week__parameter,
 .product-week__value {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $grey-light;
 }
 
 .product-week__price {
-  @include font-set($weight, $font-size-label, $line-height-modal);
+  @include font-set($font-size-label, $line-height-modal, $weight);
   color: $grey;
 }
 
 .product-week__btn {
-  @include font-set($weight, $font-size-label, $line-height-text);
+  @include font-set($font-size-label, $line-height-text, $weight);
   color: $grey;
-  border: 2px solid #444444;
+  border: 2px solid $grey;
   &:hover {
     background-color: $grey;
     color: $white;

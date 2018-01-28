@@ -3,11 +3,11 @@
 }
 
 .main-nav__item {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $grey-light;
 }
 
 .main-nav__link {
-  @include font-set($weight, $font-size-label, $line-height-modal);
+  @include font-set($font-size-label, $line-height-modal, $weight);
   color: $black;
   &:hover {
     color: rgba(0, 0, 0, 0.6);
