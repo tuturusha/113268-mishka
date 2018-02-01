@@ -1,20 +1,58 @@
-.page-header__title {
-  @include font-set($font-size-title, $line-height-title, $weight);
-  color: $black;
+.page-header {
+  padding-top: 20px;
+  margin: 0 auto;
+  display: block;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+  }
 }
 
 .page-header__top {
-  border-top: 2px solid $grey-light;
-  border-bottom: 2px solid $grey-light;
+  height: 395px;
+  margin-bottom: 134px;
+
+  @media (min-width: $width-tablet) {
+    height: 89px;
+    display: flex;
+    margin: 0 40px;
+  }
+}
+
+.page-header__title {
+  @include font-set($font-size-title, $line-height-title, $weight);
+  text-align: center;
+  color: $black;
+  padding: 0 20px;
+  padding-top: 56px;
+}
+
+.page-header__text {
+  @include font-set($font-size-reviews, $line-height-modal);
+  display: none;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+    padding-left: 500px;
+  }
 }
 
 .page-header__intro {
   background-color: $bg-color;
+  margin-top: 50px;
+  margin: 0 auto;
   &--image {
-    background-image: url(../img/hero-mobile@1x.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 282px;
-    width: 320px;
+      background-image: url(../img/hero-mobile@1x.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 282px;
+    }
+  @media (min-width: $width-tablet) {
+    &--image {
+      background-position: center;
+      margin-top: -26px;
+    }
   }
+
+
 }

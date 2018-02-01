@@ -1,8 +1,18 @@
 .category__list {
   @include list-style();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-direction: row;
+  }
 }
+
 .category__item {
   background-color: $primary-color-dark;
+  padding: 30px;
+  flex-grow: 1;
   &--light {
     background-color: $primary-color;
   }
