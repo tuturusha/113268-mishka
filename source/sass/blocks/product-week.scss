@@ -1,16 +1,74 @@
+.produck-week__wrapper {
+  margin: 0 30px;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin: 0 100px;
+  }
+}
+
+.product-week__header {
+  @media (min-width: $width-tablet) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (min-width: $width-desktop) {
+    justify-content: flex-start;
+  }
+}
+
 .product-week__title {
   @include font-set($font-size-menu, $line-height-title, $weight);
   color: $black;
+  margin-bottom: 10px;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-large, $line-height-large, $weight);
+  }
+
+  @media (min-width: $width-desktop) {
+    order: 2;
+    z-index: 1;
+    @include font-set($font-size-huge, $line-height-huge, $weight);
+  }
 }
 
 .product-week__label {
   @include font-set($font-size-label, $line-height-text, $weight);
   color: $primary-color;
+  text-transform: uppercase;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-label, $line-height-label, $weight);
+    width: 72px;
+    padding-top: 45px;
+    order: 2;
+  }
+
+  @media (min-width: $width-desktop) {
+    order: 1;
+    padding-right: 50px;
+  }
 }
 
 .product-week__content {
   @include font-set($font-size-reviews, $line-height-modal);
   color: $grey;
+  margin-bottom: 30px;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 306px;
+    margin-bottom: 0;
+  }
 }
 
 .product-week__table {
@@ -20,16 +78,45 @@
 .product-week__parameter,
 .product-week__value {
   border-bottom: 1px solid $grey-light;
+  padding: 10px 0;
+}
+
+.product-week__image {
+  @media (min-width: $width-tablet) {
+    height: 404px;
+  }
+
+  @media (min-width: $width-desktop) {
+    height: 636px;
+    width: 525px;
+    margin-top: -54px;
+    margin-left: 220px;
+  }
+}
+
+.product-week__footer {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $width-tablet) {
+    flex-direction: column;
+    margin-top: -126px;
+  }
 }
 
 .product-week__price {
   @include font-set($font-size-label, $line-height-modal, $weight);
   color: $grey;
+  padding-bottom: 28px;
+  text-align: center;
 }
 
 .product-week__btn {
   @include font-set($font-size-label, $line-height-text, $weight);
   color: $grey;
+  padding: 15px 80px;
   border: 2px solid $grey;
   &:hover {
     background-color: $grey;
