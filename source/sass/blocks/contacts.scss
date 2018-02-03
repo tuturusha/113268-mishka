@@ -1,11 +1,62 @@
+.contacts {
+  margin-bottom: 40px;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $width-desktop) {
+    justify-content: space-between;
+    margin: 100px 100px;
+  }
+}
+
+.contacts-wrapper {
+  margin: 0 30px;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    flex-direction: column;
+    order: 2;
+  }
+}
+
 .contacts__title {
-  @include font-set( $font-size-medium, $line-height-title, $weight);
+  @include font-set($font-size-medium, $line-height-title, $weight);
   color: $black;
+  padding-bottom: 39px;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-large, $line-height-large, $weight);
+    width: 100%;
+  }
+
+  @media (min-width: $width-desktop) {
+    @include font-set($font-size-huge, $line-height-huge, $weight);
+  }
 }
 
 .contacts__item {
   @include font-set($font-size-reviews, $line-height-title);
   color: $grey;
+  display: flex;
+  padding-bottom: 37px;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-label, $line-height-title);
+    align-items: flex-start;
+    width: 306px;
+  }
+}
+
+.contacts__label {
+  padding-right: 28px;
 }
 
 .contacts__email {
@@ -21,8 +72,51 @@
   }
 }
 
+.contacts__adress {
+}
+
+.contacts__map {
+  padding-bottom: 40px;
+
+  @media (min-width: $width-tablet) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 525px;
+    order: 3;
+    margin: 0;
+  }
+}
+
 .contacts__btn {
   @include font-set($font-size-medium, $line-height-text, $weight);
   color: $grey;
   border: 2px solid $grey;
+  padding: 17px 50px;
+  margin-left: 29px;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $width-tablet) {
+    order: 4;
+    margin-left: 175px;
+    margin-top: -50px;
+  }
+}
+
+.contacts__flag {
+  &--add {
+    display: none;
+  }
+
+  @media (min-width: $width-desktop) {
+    order: 1;
+    &--add {
+      display: block;
+    }
+  }
 }

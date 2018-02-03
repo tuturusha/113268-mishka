@@ -1,5 +1,6 @@
 .main-nav {
   margin: 0 auto;
+
   @media (min-width: $width-tablet) {
     display: flex;
   }
@@ -41,8 +42,8 @@
 
     }
     &--search, &--basket {
-       order: 1;
-       border-left: 1px solid $grey-light;
+      order: 1;
+      border-left: 1px solid $grey-light;
     }
   }
 
@@ -55,11 +56,11 @@
       width: 112px;
       border: none;
       order: 1;
-      padding-right: 100px;
+      padding: 0 100px;
     }
     &--search, &--basket {
-       order: 1;
-       border-left: 1px solid $grey-light;
+      order: 1;
+      border-left: 1px solid $grey-light;
     }
     &--append {
       display: block;

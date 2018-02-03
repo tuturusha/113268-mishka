@@ -54,7 +54,8 @@
 
   @media (min-width: $width-desktop) {
     order: 1;
-    padding-right: 50px;
+    width: 175px;
+    padding-right: 0;
   }
 }
 
@@ -68,6 +69,10 @@
     flex-direction: column;
     width: 306px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-left: 175px;
   }
 }
 
@@ -88,7 +93,6 @@
 
   @media (min-width: $width-desktop) {
     height: 636px;
-    width: 525px;
     margin-top: -54px;
     margin-left: 220px;
   }
@@ -103,6 +107,10 @@
   @media (min-width: $width-tablet) {
     flex-direction: column;
     margin-top: -126px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-left: 175px;
   }
 }
 

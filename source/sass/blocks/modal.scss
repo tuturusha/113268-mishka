@@ -1,11 +1,39 @@
+.modal {
+  margin-top: 50px;
+}
+
+.modal__wrapper {
+  padding: 37px 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $width-tablet) {
+    padding: 107px 53px;
+    text-align: center;
+  }
+}
+
 .modal__title {
   @include font-set( $font-size-menu, $line-height-title, $weight);
   color: $black;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  width: 156px;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-modal, $line-height-huge, $weight);
+    width: 100%;
+  }
 }
 
 .modal__text {
   @include font-set($font-size-reviews, $line-height-title);
   color: $grey;
+  margin-bottom: 30px;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-label, $line-height-title);
+  }
 }
 
 .modal-form__label-radio {
@@ -17,4 +45,10 @@
   @include font-set($font-size-label, $line-height-btn, $weight);
   color: $white;
   background-color: $primary-color;
+  padding: 17px 50px;
+  margin-top: 32px;
+
+  @media (min-width: $width-tablet) {
+    padding: 20px 126px;
+  }
 }
