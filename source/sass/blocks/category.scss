@@ -21,6 +21,7 @@
 
 .category__link {
   color: $white;
+
   @include font-set( $font-size-link, $line-height-title, $weight);
 
   &:active {

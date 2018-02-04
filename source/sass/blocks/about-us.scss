@@ -49,6 +49,7 @@
   @media (min-width: $width-tablet) {
     @include font-set( $font-size-link, $line-height-link, $weight);
     width: 300px;
+
     &--rectangle,
     &--thread {
       order: 1;
