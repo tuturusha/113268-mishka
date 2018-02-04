@@ -36,6 +36,7 @@
   @media (min-width: $width-desktop) {
     order: 2;
     z-index: 1;
+
     @include font-set($font-size-huge, $line-height-huge, $weight);
   }
 }
@@ -126,10 +127,12 @@
   color: $grey;
   padding: 15px 80px;
   border: 2px solid $grey;
+
   &:hover {
     background-color: $grey;
     color: $white;
   }
+
   &:active {
     background-color: $grey;
     color: rgba(255, 255, 255, 0.3);

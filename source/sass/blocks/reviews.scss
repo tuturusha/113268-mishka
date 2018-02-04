@@ -6,16 +6,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-image: url(../img/review@1x.jpg);
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left top;
-  }
-}
-
-.reviews__slider {
-  @media (min-width: $width-tablet) {
-    margin: 0;
-    order: 3;
   }
 }
 
@@ -39,6 +32,9 @@
   @media (min-width: $width-tablet) {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    order: 3;
+    }
   }
 
   @media (min-width: $width-desktop) {
@@ -59,11 +55,13 @@
 .reviews__author {
   font-size: $font-size-label;
   margin-bottom: 36px;
+
   &-name {
     color: $black;
     font-weight: $weight;
     padding-bottom: 15px;
   }
+
   &-hashtag {
     color: $grey;
   }
@@ -72,6 +70,7 @@
     order: 5;
     width: 245px;
     padding-top: 60px;
+
     &-name {
       @include font-set($font-size-medium, $line-height-modal);
     }

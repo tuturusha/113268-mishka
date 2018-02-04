@@ -13,13 +13,16 @@
   background-color: $primary-color-dark;
   padding: 30px;
   flex-grow: 1;
+
   &--light {
     background-color: $primary-color;
   }
 }
+
 .category__link {
   color: $white;
   @include font-set( $font-size-link, $line-height-title, $weight);
+
   &:active {
     color: $black-light;
   }

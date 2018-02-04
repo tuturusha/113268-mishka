@@ -20,6 +20,7 @@
 
   @media (min-width: $width-tablet) {
     order: 2;
+
     @include font-set($font-size-link, $line-height-modal, $weight);
   }
 

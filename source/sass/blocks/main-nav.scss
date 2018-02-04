@@ -19,11 +19,13 @@
   padding: 35px 30px;
   text-align: center;
   border-bottom: 1px solid $grey-light;
+
   &--logo {
     @include center();
     height: 78px;
     border-top: 1px solid $grey-light;
   }
+
   &--append {
     display: none;
   }
@@ -31,37 +33,46 @@
   @media (min-width: $width-tablet) {
     padding: 0;
     border-bottom: 1px solid $grey-light;
-    &--catalog, &--form {
+
+    &--catalog,
+    &--form {
       order: 2;
       border: none;
     }
+
     &--logo {
       flex-grow: 1;
       width: 112px;
       border: none;
-
     }
-    &--search, &--basket {
+
+    &--search,
+    &--basket {
       order: 1;
       border-left: 1px solid $grey-light;
     }
   }
 
   @media (min-width: $width-desktop) {
-    &--catalog, &--form {
+    &--catalog,
+    &--form {
       order: 0;
       border: none;
     }
+
     &--logo {
       width: 112px;
       border: none;
       order: 1;
       padding: 0 100px;
     }
-    &--search, &--basket {
+
+    &--search,
+    &--basket {
       order: 1;
       border-left: 1px solid $grey-light;
     }
+
     &--append {
       display: block;
       order: 2;
@@ -72,9 +83,11 @@
 .main-nav__link {
   @include font-set($font-size-label, $line-height-modal, $weight);
   color: $black;
+
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }
+
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }

@@ -4,16 +4,15 @@
   margin-bottom: 60px;
 
   @media (min-width: $width-tablet) {
-    margin:0 50px;
+    margin: 0 50px;
     margin-bottom: 83px;
   }
 
   @media (min-width: $width-desktop) {
-    margin:0 50px;
+    margin: 0 50px;
     padding: 0 175px;
     margin-bottom: 83px;
   }
-
 }
 
 .about-us__title {
@@ -50,10 +49,13 @@
   @media (min-width: $width-tablet) {
     @include font-set( $font-size-link, $line-height-link, $weight);
     width: 300px;
-    &--rectangle, &--thread {
+    &--rectangle,
+    &--thread {
       order: 1;
     }
-    &--heart, &--gift {
+
+    &--heart,
+    &--gift {
       order: 2;
     }
   }
