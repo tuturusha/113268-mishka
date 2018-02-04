@@ -23,8 +23,7 @@
   @include font-set($font-size-title, $line-height-title, $weight);
   text-align: center;
   color: $black;
-  padding: 0 20px;
-  padding-top: 56px;
+  padding: 56px 20px;
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-large, $line-height-large, $weight);
