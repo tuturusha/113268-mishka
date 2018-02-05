@@ -1,21 +1,85 @@
 .production {
-  border-left: 2px solid #ececec;
-  border-right: 2px solid #ececec;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
+  border: 2px solid $grey-light;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 109px;
+  }
+
+  @media (min-width: $width-desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
+
 .production__title {
-  @include font-set($weight, $font-size-label, $line-height-modal);
+  @include font-set($font-size-label, $line-height-modal, $weight);
   color: $black;
+  padding: 26px 31px;
+
+  @media (min-width: $width-tablet) {
+    order: 2;
+
+    @include font-set($font-size-link, $line-height-modal, $weight);
+  }
+
+  @media (min-width: $width-desktop) {
+    @include font-set($font-size-link, $line-height-modal, $weight);
+    padding: 0;
+    padding-top: 100px;
+  }
+}
+
+.production__player {
+  @media (min-width: $width-tablet) {
+    order: 1;
+    width: 100%;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 682px;
+  }
+}
+
+.production__footer {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $width-tablet) {
+    order: 3;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 260px;
+    margin-left: 660px;
+  }
 }
 
 .production__info {
-  @include font-set($weight-regular, $font-size-mini, $line-height-modal);
+  @include font-set($font-size-mini, $line-height-modal);
   color: $grey;
+  padding: 0 27px;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-reviews, $line-height-title);
+  }
 }
 
 .production__button {
-  @include font-set($weight, $font-size-label, $line-height-btn);
+  @include font-set($font-size-label, $line-height-btn, $weight);
   color: $grey;
-  border: 2px solid #444444;
+  border: 2px solid $grey;
+  text-transform: uppercase;
+  padding: 14px 25px;
+  margin: 30px auto;
+
+  @media (min-width: $width-tablet) {
+    padding: 21px 219px;
+    text-align: center;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 14px 25px;
+  }
 }

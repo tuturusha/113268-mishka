@@ -1,13 +1,63 @@
+.about-us__wrapper {
+  margin: 0 29px;
+  margin-top: 75px;
+  margin-bottom: 60px;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 50px;
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin: 0 50px;
+    padding: 0 175px;
+    margin-bottom: 83px;
+  }
+}
+
 .about-us__title {
-  line-height: 30px;
-  @include font-set($weight, $font-size-menu, $line-height-title);
+  @include font-set( $font-size-menu, $line-height-title, $weight);
   color: $black;
+
+  @media (min-width: $width-tablet) {
+    @include font-set( $font-size-large, $line-height-large, $weight);
+  }
+
+  @media (min-width: $width-desktop) {
+    @include font-set( $font-size-huge, $line-height-huge, $weight);
+  }
 }
 
 .about-us__list {
   @include list-style();
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (min-width: $width-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .about-us__item {
-  @include font-set($weight, $font-size-label, $line-height-text);
+  @include font-set($font-size-label, $line-height-text, $weight);
+  color: $black;
+  padding-top: 57px;
+
+  @media (min-width: $width-tablet) {
+    @include font-set( $font-size-link, $line-height-link, $weight);
+    width: 300px;
+
+    &--rectangle,
+    &--thread {
+      order: 1;
+    }
+
+    &--heart,
+    &--gift {
+      order: 2;
+    }
+  }
 }

@@ -1,28 +1,94 @@
-.goods-item {
-  border-left: 2px solid #ececec;
-  border-right: 2px solid #ececec;
+.page-main__intro {
+  margin: 0 30px;
+  margin-bottom: 55px;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 50px;
+  }
+}
+
+.goods {
+  margin-top: 30px;
 }
 
 .goods__list {
   @include list-style();
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $width-desktop) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
-.goods-item__header,
-.goods-item__footer {
-  border-bottom: 1px solid #ededed;
+.goods-item {
+  border: 2px solid $grey-light;
+  margin-bottom: 30px;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    width: 100%;
+  }
+
+  @media (min-width: $width-desktop) {
+    flex-direction: column;
+    width: auto;
+  }
+}
+
+.goods-item__link {
+  @media (min-width: $width-tablet) {
+    width: 334px;
+    height: 334px;
+  }
+}
+
+.goods-item__description {
+  padding: 27px;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.goods-item__header {
+  border-bottom: 1px solid $grey-light;
 }
 
 .goods-item__title {
-  @include font-set($weight, $font-size-label, $line-height-modal);
+  @include font-set($font-size-label, $line-height-modal, $weight);
   color: $black;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-link, $line-height-modal, $weight);
+  }
 }
 
 .goods-item__text {
-  @include font-set($weight-regular, $font-size-mini, $line-height-title);
+  @include font-set($font-size-mini, $line-height-title);
   color: $grey;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-reviews, $line-height-title);
+  }
+}
+
+.goods-item__footer {
+  padding-top: 28px;
 }
 
 .goods-item__price {
-  @include font-set($weight, $font-size-reviews, $line-height-modal);
+  @include font-set($font-size-reviews, $line-height-modal, $weight);
   color: $black;
+
+  @media (min-width: $width-tablet) {
+    @include font-set($font-size-label, $line-height-modal, $weight);
+  }
 }

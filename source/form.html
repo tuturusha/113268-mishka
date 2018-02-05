@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-        </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__toggle, visually-hidden" type="button">Открыть меню</button>
           <ul class="main-nav__list">
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--logo">
+              <a class="main-nav__logo" href="index.html">
+                <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--catalog">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--form">
               <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--search">
               <a class="main-nav__link" href="#">Поиск по сайту</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--basket">
               <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+            </li>
+            <li class="main-nav__item--append">
+              <a class="main-nav__link" href="#">Новые поступления</a>
+            </li>
+            <li class="main-nav__item--append">
+              <a class="main-nav__link" href="#">Распродажа</a>
             </li>
           </ul>
         </nav>
@@ -34,7 +43,7 @@
         <h1 class="page-header__title">Вязание на заказ</h1>
       </div>
     </header>
-    <main>
+    <main class="page-main__order">
       <p class="promo-text">
         Мы будем рады воплотить в жизнь ваши пожелания!
         Заполните простую форму заказа и мы свяжемся с вами,
@@ -42,18 +51,19 @@
       </p>
       <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="order-form__item">
-          <legend class="order-form__title">Тип</legend>
-          <div class="order-form__wrap">
-            <input class="order-form__input-radio" type="radio" name="type" id="accessory" checked>
-            <label class="order-form__label-radio" for="accessory">Аксессуар для интерьера</label>
-          </div>
-          <div class="order-form__wrap">
-            <input class="order-form__input-radio" type="radio" name="type" id="children-toy">
-            <label class="order-form__label-radio" for="children-toy">Детская игрушка</label>
+          <div class="order-form__wrapper">
+            <h2 class="order-form__title">Тип</h2>
+            <div class="order-form__group">
+              <input class="order-form__input-radio" type="radio" name="type" id="accessory" checked>
+              <label class="order-form__label-radio" for="accessory">Аксессуар для интерьера</label>
+              <input class="order-form__input-radio" type="radio" name="type" id="children-toy">
+              <label class="order-form__label-radio" for="children-toy">Детская игрушка</label>
+            </div>
           </div>
         </fieldset>
-        <fieldset class="order-form__item">
-          <legend class="order-form__title">Цвет</legend>
+        <fieldset class="order-form__item--color">
+          <div class="order-form__wrapper">
+            <h2 class="order-form__title">Цвет</h2>
             <ul class="order-form__list">
               <li class="order-form__color">
                 <input class="order-form__input-check" type="checkbox" name="color" id="white" checked>
@@ -80,29 +90,46 @@
                 <label class="order-form__label-check" for="orange">Оранжевый</label>
               </li>
             </ul>
+          </div>
         </fieldset>
         <fieldset class="order-form__item">
-          <legend class="order-form__title">ФИО</legend>
-          <label class="order-form__label" for="name">Имя:</label>
-          <input class="order-form__input" type="text" id="name" name="name" placeholder="Введите ваше имя*">
-          <label class="order-form__label" for="lastname">Фамилия:</label>
-          <input class="order-form__input" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию*">
-          <label class="order-form__label" for="middlename">Отчество:</label>
-          <input class="order-form__input" type="text" id="middlename" name="middlename" placeholder="Отчество, если желаете*">
+          <div class="order-form__wrapper">
+            <h2 class="order-form__title">ФИО</h2>
+            <div class="order-form__group">
+              <label class="order-form__label" for="name">Имя:</label>
+              <input class="order-form__input" type="text" id="name" name="name" placeholder="Введите ваше имя*">
+              <label class="order-form__label" for="lastname">Фамилия:</label>
+              <input class="order-form__input" type="text" id="lastname" name="lastname" placeholder="Укажите фамилию*">
+              <label class="order-form__label" for="middlename">Отчество:</label>
+              <input class="order-form__input" type="text" id="middlename" name="middlename" placeholder="Отчество, если желаете*">
+            </div>
+          </div>
         </fieldset>
         <fieldset class="order-form__item">
-          <legend class="order-form__title">Тел</legend>
-          <input class="order-form__input" type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 XXX XX XX*">
+          <div class="order-form__wrapper">
+            <h2 class="order-form__title">Тел</h2>
+            <div class="order-form__group--single">
+              <input class="order-form__input order-form__input--single" type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 XXX XX XX*">
+            </div>
+          </div>
         </fieldset>
         <fieldset class="order-form__item">
-          <legend class="order-form__title">E-mail</legend>
-          <input class="order-form__input" type="email" name="email" placeholder="Ваш Email*">
+          <div class="order-form__wrapper">
+            <h2 class="order-form__title">E-mail</h2>
+            <div class="order-form__group--single">
+              <input class="order-form__input order-form__input--single" type="email" name="email" placeholder="Ваш Email*">
+            </div>
+          </div>
         </fieldset>
         <fieldset class="order-form__item">
-          <legend class="order-form__title">Доп</legend>
-          <textarea class="order-form__textarea" name="goods-wishes" rows="4" required>
-            Опишите все ваши пожелания к заказу
-          </textarea>
+          <div class="order-form__wrapper">
+            <h2 class="order-form__title">Доп</h2>
+            <div class="order-form__group--single">
+              <textarea class="order-form__textarea" name="goods-wishes" rows="4" required>
+                Опишите все ваши пожелания к заказу
+              </textarea>
+            </div>
+          </div>
         </fieldset>
         <div class="order-form__footer">
           <small class="order-form__item-comment"><sup>*</sup>Поля обязательны для заполнения</small>
@@ -111,37 +138,41 @@
       </form>
     </main>
     <footer class="page-footer">
-      <div class="social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Инстаграм</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Фейсбук</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Твиттер</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Aсademy</a>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="#">Мишка</a>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Инстаграм</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">Твиттер</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Aсademy</a>
+        </div>
       </div>
     </footer>
-    <div class="modal--add-cart">
-      <b class="modal__title">Добавить в корзину</b>
-      <span class="modal__text">Выберите размер</span>
-      <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
-        <input class="modal-form__input-radio" type="radio" name="size" id="small" checked>
-        <label class="modal-form__label-radio" for="small">S</label>
-        <input class="modal-form__input-radio" type="radio" name="size" id="medium" checked>
-        <label class="modal-form__label-radio" for="medium">M</label>
-        <input class="modal-form__input-radio" type="radio" name="size" id="large" checked>
-        <label class="modal-form__label-radio" for="large">L</label>
-        <button class="modal__btn btn" type="submit">Добавить</button>
-      </form>
+    <div class="modal modal--add-cart">
+      <div class="modal__wrapper">
+        <b class="modal__title">Добавить в корзину</b>
+        <span class="modal__text">Выберите размер</span>
+        <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
+          <input class="modal-form__input-radio" type="radio" name="size" id="small" checked>
+          <label class="modal-form__label-radio" for="small">S</label>
+          <input class="modal-form__input-radio" type="radio" name="size" id="medium" checked>
+          <label class="modal-form__label-radio" for="medium">M</label>
+          <input class="modal-form__input-radio" type="radio" name="size" id="large" checked>
+          <label class="modal-form__label-radio" for="large">L</label>
+          <button class="modal__btn btn" type="submit">Добавить</button>
+        </form>
+      </div>
     </div>
   </body>
-
 </html>
