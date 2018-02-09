@@ -30,11 +30,9 @@
 
 .about-us__list {
   @include list-style();
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 
   @media (min-width: $width-tablet) {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;

@@ -1,11 +1,8 @@
 .category__list {
   @include list-style();
-  display: flex;
-  flex-direction: column;
 
   @media (min-width: $width-tablet) {
     display: flex;
-    flex-direction: row;
   }
 }
 
