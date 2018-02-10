@@ -2,15 +2,18 @@
   @include font-set($font-size-title, $line-height-title, $weight);
   text-align: center;
   color: $black;
-  padding: 56px 20px;
+  padding: 0 20px;
+  padding-top: 74px;
   margin: 0;
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-large, $line-height-large, $weight);
+    padding-top: 104px;
   }
 
   @media (min-width: $width-desktop) {
     @include font-set($font-size-huge, $line-height-huge, $weight);
+    padding-top: 119px;
   }
 }
 
@@ -19,15 +22,16 @@
   display: none;
 
   @media (min-width: $width-tablet) {
+    position: absolute;
+    top: 95px;
+    right: 55px;
     display: block;
-    padding-left: 500px;
   }
 }
 
 .page-header__intro {
-  background-color: $bg-color;
+  background-color: #f9f9f9;
   margin: 0 auto;
-  margin-top: 50px;
 
   &--image {
     background-image: url("../img/hero-mobile@1x.jpg");
@@ -37,9 +41,16 @@
   }
 
   @media (min-width: $width-tablet) {
+    padding-top: 55px;
+
     &--image {
+      height: 626px;
       background-position: center;
-      margin-top: -26px;
+      margin-top: -78px;
     }
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-top: -57px;
   }
 }

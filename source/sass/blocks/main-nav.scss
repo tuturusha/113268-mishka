@@ -115,6 +115,7 @@
     padding-top: 26px;
     padding-right: 26px;
     padding-left: 30px;
+    z-index: 2;
 
     &--catalog,
     &--form {
@@ -168,6 +169,7 @@
       padding-top: 26px;
       padding-right: 26px;
       padding-left: 30px;
+      z-index: 2;
     }
   }
 }
