@@ -34,7 +34,6 @@
     height: 22px;
     left: 32px;
     top: 18px;
-
   }
 
   @media (min-width: $width-tablet) {
@@ -42,6 +41,7 @@
     margin: 0;
     margin-top: 28px;
     order: 2;
+
     @include font-set($font-size-link, $line-height-modal, $weight);
 
     &::before {
@@ -63,6 +63,7 @@
   @media (min-width: $width-tablet) {
     order: 1;
     width: 100%;
+
     img {
       width: 668px;
       height: 455px;

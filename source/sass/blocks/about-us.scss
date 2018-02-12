@@ -6,7 +6,6 @@
   @media (min-width: $width-tablet) {
     margin: 0 50px;
     margin-bottom: 38px;
-
   }
 
   @media (min-width: $width-desktop) {
@@ -31,6 +30,7 @@
   @media (min-width: $width-desktop) {
     margin: 0;
     padding-bottom: 32px;
+
     @include font-set( $font-size-huge, $line-height-huge, $weight);
   }
 }

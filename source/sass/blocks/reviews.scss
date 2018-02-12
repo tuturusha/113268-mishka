@@ -158,8 +158,8 @@
   @media (min-width: $width-tablet) {
     @include font-set($font-size-label, $line-height-text, $weight);
     padding: 19px 38px;
-    margin-top: 75px;
     margin: 0;
+    margin-top: 75px;
     order: 2;
   }
 

@@ -78,14 +78,15 @@
 }
 
 .main-nav--closed .main-nav__item {
-    display: none;
+  display: none;
 
-    &--active {
-      display: block;
-    }
-    @media (min-width: $width-tablet) {
-      display: block;
-    }
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: $width-tablet) {
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -206,6 +207,7 @@
   &--svg {
     position: absolute;
     left: 30px;
+
     path {
       fill: #d3d2d2;
     }
@@ -230,7 +232,7 @@
     }
 
     &--site {
-        display: none;
+      display: none;
     }
   }
 }
