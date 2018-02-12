@@ -1,8 +1,14 @@
 .category {
-  margin-top: -77px;
 
   @media (min-width: $width-tablet) {
     margin-top: -51px;
+    padding: 0 58px;
+  }
+
+  @media (min-width: $width-desktop) {
+    max-width: $width-desktop;
+    margin: 0 auto;
+    margin-top: -35px;
     padding: 0 58px;
   }
 }
@@ -38,6 +44,7 @@
 
   @media (min-width: $width-tablet) {
     width: 50%;
+    padding: 24px 29px;
   }
 }
 

@@ -1,24 +1,29 @@
 .contacts {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 
   @media (min-width: $width-tablet) {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
 
   @media (min-width: $width-desktop) {
+    max-width: $width-desktop;
+    margin: 0 auto;
     justify-content: space-between;
-    margin: 100px 100px;
+    padding: 100px 100px;
+    padding-top: 175px;
+    padding-bottom: 70px;
   }
 }
 
 .contacts-wrapper {
-  margin: 0 30px;
+  padding: 0 30px;
 
   @media (min-width: $width-tablet) {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 50px;
+    padding: 0 50px;
   }
 
   @media (min-width: $width-desktop) {
@@ -30,11 +35,13 @@
 .contacts__title {
   @include font-set($font-size-medium, $line-height-title, $weight);
   color: $black;
-  padding-bottom: 39px;
+  padding-bottom: 13px;
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-large, $line-height-large, $weight);
     width: 100%;
+    margin: 0;
+    padding: 50px 0;
   }
 
   @media (min-width: $width-desktop) {
@@ -46,7 +53,7 @@
   @include font-set($font-size-reviews, $line-height-title);
   color: $grey;
   display: flex;
-  padding-bottom: 37px;
+  padding-bottom: 27px;
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-label, $line-height-title);
@@ -56,7 +63,7 @@
 }
 
 .contacts__label {
-  padding-right: 28px;
+  padding-right: 36px;
 }
 
 .contacts__email {
@@ -75,17 +82,22 @@
 }
 
 .contacts__map {
-  padding-bottom: 40px;
+  padding-bottom: 61px;
 
   @media (min-width: $width-tablet) {
     width: 100%;
-    margin-bottom: 50px;
+    padding-bottom: 74px;
+    img {
+      width: 786px;
+      height: 457px;
+    }
   }
 
   @media (min-width: $width-desktop) {
     width: 525px;
     order: 3;
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -96,11 +108,21 @@
   padding: 17px 50px;
   margin-left: 29px;
 
+  &:hover {
+    background-color: $grey;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $grey;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: $width-tablet) {
     margin: 0 auto;
   }
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $width-desktop) {
     order: 4;
     margin-left: 175px;
     margin-top: -50px;
@@ -112,10 +134,24 @@
     display: none;
   }
 
+  @media (min-width: $width-tablet) {
+    &--add {
+      display: block;
+      position: absolute;
+      right: 65px;
+      top: 36px;
+      width: 47px;
+      height: 81px;
+      background-image: url("/img/icon-flag.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
   @media (min-width: $width-desktop) {
     order: 1;
 
     &--add {
+      position: static;
       display: block;
     }
   }

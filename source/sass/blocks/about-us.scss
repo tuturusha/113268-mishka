@@ -1,17 +1,21 @@
 .about-us__wrapper {
   margin: 0 29px;
-  margin-top: 75px;
-  margin-bottom: 60px;
+  margin-top: 66px;
+  margin-bottom: 38px;
 
   @media (min-width: $width-tablet) {
     margin: 0 50px;
-    margin-bottom: 83px;
+    margin-bottom: 38px;
+
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0 50px;
-    padding: 0 175px;
-    margin-bottom: 83px;
+    max-width: $width-desktop;
+    margin: 0 auto;
+    padding-left: 175px;
+    padding-right: 190px;
+    padding-top: 70px;
+    width: 680px;
   }
 }
 
@@ -21,9 +25,12 @@
 
   @media (min-width: $width-tablet) {
     @include font-set( $font-size-large, $line-height-large, $weight);
+    padding-top: 86px;
   }
 
   @media (min-width: $width-desktop) {
+    margin: 0;
+    padding-bottom: 32px;
     @include font-set( $font-size-huge, $line-height-huge, $weight);
   }
 }
@@ -42,14 +49,74 @@
 .about-us__item {
   @include font-set($font-size-label, $line-height-text, $weight);
   color: $black;
-  padding-top: 57px;
+  padding-top: 65px;
+  padding-bottom: 20px;
+  padding-right: 8px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    fill: #63d1bb;
+  }
+
+  &--flower::before {
+    background-image: url("/img/icon-feature-flower.svg");
+    width: 32px;
+    height: 37px;
+    top: 11px;
+    left: 7px;
+  }
+
+  &--rectangle::before {
+    background-image: url("/img/icon-feature-money.svg");
+    width: 47px;
+    height: 27px;
+    top: 11px;
+    left: 2px;
+  }
+
+  &--heart::before {
+    background-image: url("/img/icon-feature-heart.svg");
+    width: 34px;
+    height: 27px;
+    top: 15px;
+    left: 8px;
+  }
+
+  &--thread::before {
+    background-image: url("/img/icon-feature-ball.svg");
+    width: 35px;
+    height: 34px;
+    top: 15px;
+    left: 6px;
+  }
+
+  &--rocket::before {
+    background-image: url("/img/icon-feature-rocket.svg");
+    width: 55px;
+    height: 23px;
+    top: 15px;
+    left: -4px;
+  }
+
+  &--gift::before {
+    background-image: url("/img/icon-feature-gift.svg");
+    width: 33px;
+    height: 32px;
+    top: 14px;
+    left: 3px;
+  }
 
   @media (min-width: $width-tablet) {
     @include font-set( $font-size-link, $line-height-link, $weight);
     width: 300px;
+    padding-bottom: 46px;
+    padding-right: 33px;
 
     &--rectangle,
-    &--thread {
+    &--rocket {
       order: 1;
     }
 
