@@ -6,14 +6,31 @@
   padding-top: 74px;
   margin: 0;
 
+  &--catalog {
+    padding-bottom: 70px;
+  }
+
   @media (min-width: $width-tablet) {
     @include font-set($font-size-large, $line-height-large, $weight);
     padding-top: 104px;
+
+    &--catalog {
+      margin: 0;
+      padding-top: 70px;
+      padding-bottom: 128px;
+      margin-top: -50px;
+    }
   }
 
   @media (min-width: $width-desktop) {
     @include font-set($font-size-huge, $line-height-huge, $weight);
     padding-top: 119px;
+
+    &--catalog {
+      padding-top: 100px;
+      padding-bottom: 82px;
+      margin-top: -50px;
+    }
   }
 }
 
@@ -41,7 +58,6 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding-top: 40px;
 
     &--image {
       height: 626px;

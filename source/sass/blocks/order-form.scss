@@ -39,6 +39,11 @@
     flex-direction: row;
     padding: 0;
   }
+
+  @media (min-width: $width-desktop) {
+    max-width: $width-desktop;
+    margin: 0 auto;
+  }
 }
 
 .order-form__title {
@@ -170,10 +175,12 @@
     display: flex;
     margin: 50px;
     justify-content: space-between;
+    margin-right: 225px;
+  }
 
-    @media (min-width: $width-desktop) {
-      margin-right: 225px;
-    }
+  @media (min-width: $width-desktop) {
+    max-width: $width-desktop;
+    margin: 0 auto;
   }
 }
 

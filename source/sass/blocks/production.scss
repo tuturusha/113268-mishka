@@ -4,7 +4,12 @@
   @media (min-width: $width-tablet) {
     display: flex;
     flex-direction: column;
-    margin-bottom: 109px;
+    margin-bottom: 76px;
+
+    @media (min-width: $width-desktop) {
+      max-width: $width-desktop;
+      margin: 0 auto;
+    }
   }
 
   @media (min-width: $width-desktop) {
@@ -16,12 +21,33 @@
 .production__title {
   @include font-set($font-size-label, $line-height-modal, $weight);
   color: $black;
-  padding: 26px 31px;
+  padding-top: 5px;
+  padding-left: 89px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("/img/icon-video.svg");
+    background-position: center;
+    width: 32px;
+    height: 22px;
+    left: 32px;
+    top: 18px;
+
+  }
 
   @media (min-width: $width-tablet) {
+    padding-left: 110px;
+    margin: 0;
+    margin-top: 28px;
     order: 2;
-
     @include font-set($font-size-link, $line-height-modal, $weight);
+
+    &::before {
+      top: 5px;
+      left: 48px;
+    }
   }
 
   @media (min-width: $width-desktop) {
@@ -32,13 +58,48 @@
 }
 
 .production__player {
+  position: relative;
+
   @media (min-width: $width-tablet) {
     order: 1;
     width: 100%;
+    img {
+      width: 668px;
+      height: 455px;
+    }
   }
 
   @media (min-width: $width-desktop) {
     width: 682px;
+  }
+}
+
+.production__play-btn {
+  position: absolute;
+  background-image: url("/img/icon-play.svg");
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 20%;
+  background-color: $white;
+  top: 49px;
+  right: 75px;
+  content: "";
+  width: 101px;
+  height: 77px;
+
+  &:hover {
+    background-size: 120%;
+    background-position: center;
+  }
+
+  &:active {
+    background-size: 80%;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $width-tablet) {
+    top: 190px;
+    right: 290px;
   }
 }
 
@@ -59,10 +120,14 @@
 .production__info {
   @include font-set($font-size-mini, $line-height-modal);
   color: $grey;
-  padding: 0 27px;
+  padding: 11px 27px;
+  padding-top: 21px;
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-reviews, $line-height-title);
+    margin: 0;
+    padding: 11px 50px;
+    padding-top: 35px;
   }
 }
 
@@ -77,6 +142,7 @@
   @media (min-width: $width-tablet) {
     padding: 21px 219px;
     text-align: center;
+    margin: 20px auto;
   }
 
   @media (min-width: $width-desktop) {
