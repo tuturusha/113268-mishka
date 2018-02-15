@@ -60,7 +60,6 @@
 
   @media (min-width: $width-tablet) {
     margin: 0;
-    width: 141px;
     padding: 25px 0;
   }
 }
@@ -71,6 +70,7 @@
 
   @media (min-width: $width-tablet) {
     padding: 51px 0;
+    margin: 0 20px;
   }
 }
 

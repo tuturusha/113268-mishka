@@ -1,5 +1,5 @@
 .production {
-  border: 2px solid $grey-light;
+  padding: 0 30px;
 
   @media (min-width: $width-tablet) {
     display: flex;
@@ -16,6 +16,11 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
+
+.production-wrapper {
+  border: 2px solid $grey-light;
+
 }
 
 .production__title {

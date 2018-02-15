@@ -6,6 +6,7 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left top;
+    padding: 0 40px;
   }
 
   @media (min-width: $width-desktop) {
@@ -24,7 +25,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 130px;
+    padding-top: 73px;
   }
 }
 
@@ -52,7 +53,7 @@
     flex-wrap: wrap;
     order: 3;
     padding: 0 20px;
-    padding-top: 34px;
+    padding-top: 43px;
   }
 
   @media (min-width: $width-desktop) {
@@ -157,13 +158,8 @@
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-label, $line-height-text, $weight);
-    padding: 19px 38px;
+    padding: 14px 37px;
     margin: 0;
-    margin-top: 75px;
     order: 2;
-  }
-
-  @media (min-width: $width-desktop) {
-    padding-top: 50px;
   }
 }

@@ -2,7 +2,8 @@
   @include font-set($font-size-mini, $line-height-modal);
   color: $grey;
   margin: 0;
-  padding: 0 30px;
+  padding: 25px 30px;
+  padding-bottom: 13px;
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-label, $line-height-title);
@@ -19,7 +20,8 @@
 
 .order-form__item {
   border: none;
-  width: 100%;
+  margin: 0;
+  padding: 0;
 
   &--color {
     border: none;
@@ -34,10 +36,35 @@
   display: flex;
   flex-direction: column;
   padding: 0 30px;
+  padding-bottom: 23px;
+
+  &--color {
+    padding-bottom: 8px;
+  }
+
+  &--phone {
+    padding-bottom: 16px;
+  }
+
+  &--mail {
+    padding-bottom: 16px;
+  }
+
+  &--textarea {
+    padding-bottom: 14px;
+  }
 
   @media (min-width: $width-tablet) {
     flex-direction: row;
     padding: 0;
+    padding: 0 59px;
+    padding-bottom: 27px;
+    align-items: baseline;
+
+    &--color {
+      background-color: $bg-color;
+
+    }
   }
 
   @media (min-width: $width-desktop) {
@@ -49,10 +76,31 @@
 .order-form__title {
   @include font-set($font-size-label, $line-height-btn, $weight);
   color: $primary-color;
+  text-transform: uppercase;
+  display: flex;
+
+  &--phone {
+    margin-top: 13px;
+  }
+
+  &::after {
+    margin-left: 30px;
+    z-index: -1;
+    height: 1px;
+    content: "";
+    background-color: #63d1bb;
+    flex-grow: 1;
+    align-self: center;
+  }
 
   @media (min-width: $width-tablet) {
-    padding: 0 50px;
-    width: 157px;
+    margin: 0;
+    width: 167px;
+    padding-top: 21px;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $width-desktop) {
@@ -65,11 +113,12 @@
   @include list-style();
 
   @media (min-width: $width-tablet) {
-    background-color: $bg-color;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 0 50px;
+    width: 484px;
+    padding-top: 41px;
+    padding-bottom: 20px;
   }
 
   @media (min-width: $width-desktop) {
@@ -80,7 +129,7 @@
 
 .order-form__color {
   @media (min-width: $width-tablet) {
-    padding: 10px;
+
   }
 
   @media (min-width: $width-desktop) {
@@ -92,17 +141,18 @@
 .order-form__group {
   display: flex;
   flex-wrap: wrap;
-  padding: 27px 0;
 
-  &--single {
-    padding: 0;
+  &--mail {
+    padding-bottom: 0;
   }
 
   @media (min-width: $width-tablet) {
-    margin: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
 
-    &--single {
-      width: 501px;
+    &--name {
+      padding-top: 40px;
+      padding-left: 107px;
     }
   }
 
@@ -110,10 +160,6 @@
     margin: 0;
     margin-right: 225px;
     width: 700px;
-
-    &--single {
-      width: 700px;
-    }
   }
 }
 
@@ -122,19 +168,145 @@
 .order-form__label {
   @include font-set($font-size-label, $line-height-medium, $weight);
   color: $black;
+  display: block;
+}
+
+.order-form__label-radio {
+  padding-top: 20px;
+  padding-bottom: 7px;
+  padding-left: 63px;
+  display: block;
+  position: relative;
+
+  @media (min-width: $width-tablet) {
+    width: 100%;
+    padding-bottom: 40px;
+    margin: 0;
+  }
+
 }
 
 .order-form__label-radio,
 .order-form__label-check {
-  width: 100%;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  &:hover {
+    &::before {
+      border-color: #64d2bb;
+    }
+  }
+
+  &:active,
+  &:checked {
+    &::before {
+      border-color: #c7c7c7;
+    }
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.order-form__label-radio::before {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  border-radius: 50px;
+  border: 2px solid #444444;
+  left: -1px;
+  top: 10px;
+
+  @media (min-width: $width-tablet) {
+    width: 49px;
+    height: 49px;
+    top: 1px;
+  }
+}
+
+.order-form__label-radio::after {
+
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background-color: #62d1ba;
+  left: 10px;
+  top: 23px;
+
+  @media (min-width: $width-tablet) {
+    width: 20px;
+    height: 20px;
+    top: 17px;
+    left: 15px;
+  }
+
+  &:checked {
+    display: block;
+  }
+}
+
+.order-form__label-check {
+  padding-top: 24px;
+  padding-bottom: 20px;
   padding-left: 63px;
+  display: block;
+  position: relative;
+
+  @media (min-width: $width-tablet) {
+    padding-bottom: 35px;
+    padding-right: 88px;
+
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    border: 2px solid #444444;
+    width: 35px;
+    height: 35px;
+
+    @media (min-width: $width-tablet) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 10px;
+    transform: rotate(-45deg);
+    border-left: 2px solid #444444;
+    border-bottom: 2px solid #444444;
+    left: 10px;
+    top: 21px;
+
+    @media (min-width: $width-tablet) {
+      width: 26px;
+      height: 16px;
+      top: 22px;
+      left: 13px;
+    }
+
+    &:checked {
+      display: block;
+    }
+  }
+}
+
+.order-form__input-radio,
+.order-form__input-check {
+  display: none;
 }
 
 .order-form__label {
-  margin: 7px 0;
-  padding-right: 5px;
+  margin: 0;
+  width: 100%;
+  padding-top: 16px;
+  display: block;
 
   @media (min-width: $width-tablet) {
     width: 106px;
@@ -143,8 +315,16 @@
 
 .order-form__input {
   border: none;
-  padding: 15px 0;
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 21px;
   border-bottom: solid 2px $black;
+
+  &--phone {
+    padding-bottom: 16px;
+    padding-top: 10px;
+  }
 
   @media (min-width: $width-tablet) {
     flex-grow: 1;
@@ -160,7 +340,38 @@
   }
 }
 
+.order-form__icon {
+  position: relative;
+
+  &--phone {
+    &::before {
+    position: absolute;
+    content: "";
+    right: 8px;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 24px;
+    }
+  }
+
+  &--mail {
+    &::before {
+    position: absolute;
+    content: "";
+    right: 20px;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 26px;
+    }
+  }
+}
+
 .order-form__textarea {
+  border: solid 2px $black;
+  width: 100%;
+  padding-top: 70px;
   @media (min-width: $width-tablet) {
     width: 450px;
   }
@@ -200,7 +411,7 @@
   color: $grey;
   border: 2px solid $grey;
   padding: 17px 45px;
-  margin: 33px 30px;
+  margin: 25px 30px;
   margin-bottom: 56px;
   background-color: $white;
 

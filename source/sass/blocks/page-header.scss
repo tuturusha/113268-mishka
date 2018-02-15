@@ -12,22 +12,24 @@
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-large, $line-height-large, $weight);
-    padding-top: 104px;
+    padding-top: 155px;
 
     &--catalog {
       margin: 0;
-      padding-top: 70px;
-      padding-bottom: 128px;
-      margin-top: -50px;
+      padding-top: 99px;
+      padding-bottom: 74px;
+      margin-top: -78px;
     }
   }
 
   @media (min-width: $width-desktop) {
     @include font-set($font-size-huge, $line-height-huge, $weight);
-    padding-top: 119px;
+    max-width: 620px;
+    margin: 0 auto;
+    padding-top: 110px;
 
     &--catalog {
-      padding-top: 100px;
+      padding-top: 113px;
       padding-bottom: 82px;
       margin-top: -50px;
     }
@@ -39,10 +41,16 @@
   display: none;
 
   @media (min-width: $width-tablet) {
-    position: absolute;
-    top: 95px;
-    right: 55px;
     display: block;
+    margin: 0 auto;
+    margin-top: 0;
+    text-align: right;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding-top: 16px;
+    max-width: $width-desktop;
   }
 }
 
@@ -58,6 +66,7 @@
   }
 
   @media (min-width: $width-tablet) {
+    border-top: 1px solid $grey-light;
     &--image {
       height: 626px;
       background-position: center;
@@ -66,8 +75,6 @@
   }
 
   @media (min-width: $width-desktop) {
-    max-width: $width-desktop;
-    margin: 0 auto;
-    margin-top: -52px;
+    margin-top: -42px;
   }
 }
