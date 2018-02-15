@@ -63,7 +63,18 @@
 
     &--color {
       background-color: $bg-color;
+    }
 
+    &--mail {
+      margin-top: -17px;
+    }
+
+    &--phone {
+      margin-top: 43px;
+    }
+
+    &--textarea {
+      margin-top: 0;
     }
   }
 
@@ -310,6 +321,12 @@
 
   @media (min-width: $width-tablet) {
     width: 106px;
+    padding-top: 13px;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $width-desktop) {
+
   }
 }
 
@@ -329,6 +346,8 @@
   @media (min-width: $width-tablet) {
     flex-grow: 1;
     width: 370px;
+    padding-top: 0;
+    padding-bottom: 31px;
   }
 
   @media (min-width: $width-desktop) {
@@ -374,6 +393,7 @@
   padding-top: 70px;
   @media (min-width: $width-tablet) {
     width: 450px;
+    margin-top: 55px;
   }
 
   @media (min-width: $width-desktop) {
@@ -384,9 +404,8 @@
 .order-form__footer {
   @media (min-width: $width-tablet) {
     display: flex;
-    margin: 50px;
+    margin: 24px 57px;
     justify-content: space-between;
-    margin-right: 225px;
   }
 
   @media (min-width: $width-desktop) {
@@ -418,5 +437,6 @@
   @media (min-width: $width-tablet) {
     margin: 0;
     order: 1;
+    padding: 17px 34px;
   }
 }
