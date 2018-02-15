@@ -118,7 +118,7 @@
     position: relative;
   }
 
-  &--search:before {
+  &--search::before {
     content: "";
     position: absolute;
     background-image: url("/img/icon-search.svg");
@@ -144,7 +144,7 @@
     }
   }
 
-  &--basket:before {
+  &--basket::before {
     content: "";
     position: absolute;
     background-image: url("/img/icon-cart.svg");
@@ -189,7 +189,6 @@
     &--logo {
       padding-left: 0;
       padding-right: 232px;
-
     }
 
     &--search,
