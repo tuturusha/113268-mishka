@@ -1,5 +1,5 @@
 .contacts {
-  padding-bottom: 40px;
+  padding-bottom: 56px;
 }
 
 .contacts__wrapper-main {
@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    padding-bottom: 52px;
+    box-sizing: border-box;
   }
 
   @media (min-width: $width-desktop) {
@@ -16,7 +16,6 @@
     padding-top: 217px;
     padding-bottom: 34px;
     padding-left: 275px;
-    padding-right: 52px;
   }
 }
 
@@ -146,7 +145,7 @@
 
   @media (min-width: $width-tablet) {
     margin: 0 auto;
-    padding: 15px 38px;
+    padding: 14px 37px;
   }
 
   @media (min-width: $width-desktop) {
@@ -169,7 +168,7 @@
       top: 36px;
       width: 47px;
       height: 81px;
-      background-image: url("/img/icon-flag.svg");
+      background-image: url("../img/icon-flag.svg");
       background-repeat: no-repeat;
     }
   }

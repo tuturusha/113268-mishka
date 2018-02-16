@@ -118,58 +118,6 @@
     position: relative;
   }
 
-  &--search::before {
-    content: "";
-    position: absolute;
-    background-image: url("/img/icon-search.svg");
-    background-repeat: no-repeat;
-    width: 18px;
-    height: 18px;
-    left: 30px;
-
-    path {
-      fill: #d3d2d2;
-    }
-
-    &:hover {
-      path {
-        fill: #63d1bb;
-      }
-    }
-
-    &:active {
-      path {
-        fill: #d0f1ea;
-      }
-    }
-  }
-
-  &--basket::before {
-    content: "";
-    position: absolute;
-    background-image: url("/img/icon-cart.svg");
-    background-repeat: no-repeat;
-    width: 21px;
-    height: 18px;
-    left: 30px;
-
-    path {
-      fill: #d3d2d2;
-    }
-
-    &:hover {
-      path {
-        fill: #63d1bb;
-      }
-    }
-
-    &:active {
-      path {
-        fill: #d0f1ea;
-      }
-    }
-  }
-
   &--append {
     display: none;
   }
@@ -241,6 +189,24 @@
       padding-left: 30px;
       z-index: 2;
     }
+  }
+}
+
+.main-nav__icon {
+  position: absolute;
+  background-color: red;
+
+  &--search {
+    width: 18px;
+    height: 18px;
+    top: 29px;
+    left: 32px;
+  }
+
+  &--basket {
+    width: 21px;
+    height: 18px;
+    left: 30px;
   }
 }
 

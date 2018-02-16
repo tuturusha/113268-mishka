@@ -19,6 +19,7 @@
   @media (min-width: $width-tablet) {
     display: flex;
     flex-direction: column;
+    padding-bottom: 86px;
   }
 
   @media (min-width: $width-desktop) {
@@ -48,13 +49,13 @@
   @media (min-width: $width-tablet) {
     padding-left: 110px;
     margin: 0;
-    padding-top: 22px;
+    padding-top: 30px;
     order: 2;
 
     @include font-set($font-size-link, $line-height-modal, $weight);
 
     &::before {
-      top: 5px;
+      top: 31px;
       left: 48px;
     }
   }
@@ -132,7 +133,7 @@
 
   @media (min-width: $width-desktop) {
     width: 309px;
-    padding-right: 32px;
+    padding-right: 18px;
   }
 }
 
@@ -158,6 +159,16 @@
   padding: 14px 25px;
   margin: 30px auto;
 
+  &:hover {
+    background-color: $grey;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $grey;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: $width-tablet) {
     padding: 17px 219px;
     text-align: center;
@@ -165,7 +176,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding: 14px 41px;
-    margin: 32px auto;
+    padding: 15px 43px;
+    margin: 39px auto;
   }
 }

@@ -27,7 +27,12 @@
   &--light {
     background-color: $primary-color;
 
-    &:hover,
+    &:hover {
+      padding-bottom: 5px;
+      box-shadow: 0 0 5px 0 #46c1ae;
+      background-color: #59d5bc;
+    }
+
     &:active {
       background-color: #59d5bc;
     }
@@ -74,15 +79,17 @@
 }
 
 .category__image {
+  background-color: red;
   display: inline-block;
   vertical-align: 20px;
-  fill: rgba(49, 104, 93, 0.5);
 
-  &:hover {
-    fill: rgba(49, 104, 93, 0.7);
+  &--interrior {
+    width: 40px;
+    height: 62px;
   }
 
-  &:active {
-    fill: rgba(49, 104, 93, 0.3);
+  &--toy {
+    width: 60px;
+    height: 60px;
   }
 }

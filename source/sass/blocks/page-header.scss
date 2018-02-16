@@ -16,8 +16,8 @@
 
     &--catalog {
       margin: 0;
-      padding-top: 56px;
-      padding-bottom: 74px;
+      padding-top: 55px;
+      padding-bottom: 70px;
     }
   }
 
@@ -25,13 +25,6 @@
     @include font-set($font-size-huge, $line-height-huge, $weight);
     max-width: 620px;
     margin: 0 auto;
-    padding-top: 110px;
-
-    &--catalog {
-      padding-top: 113px;
-      padding-bottom: 82px;
-      margin-top: -50px;
-    }
   }
 }
 
@@ -48,7 +41,6 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 16px;
     max-width: $width-desktop;
   }
 }
@@ -76,6 +68,8 @@
   }
 
   @media (min-width: $width-desktop) {
+    margin-top: -45px;
+
     &--image {
       margin-top: -42px;
     }

@@ -91,8 +91,6 @@
   width: 250px;
 
   @media (min-width: $width-tablet) {
-    display: flex;
-    flex-direction: column;
     width: 306px;
     margin-bottom: 0;
     padding: 0;
@@ -100,6 +98,8 @@
   }
 
   @media (min-width: $width-desktop) {
+    display: flex;
+    flex-direction: column;
     padding-left: 230px;
     padding-bottom: 114px;
   }
@@ -120,7 +120,8 @@
 .product-week__parameter,
 .product-week__value {
   border-bottom: 1px solid $grey-light;
-  padding-right: 27px;
+  padding-right: 22px;
+  padding-top: 10px;
 
   @media (min-width: $width-tablet) {
     padding-top: 7px;
@@ -132,7 +133,7 @@
   width: 260px;
 
   @media (min-width: $width-tablet) {
-    width: 525px;
+    width: 333px;
   }
 
   @media (min-width: $width-desktop) {
@@ -175,6 +176,7 @@
   color: $grey;
   padding: 15px 80px;
   border: 2px solid $grey;
+  text-align: center;
 
   &:hover {
     background-color: $grey;

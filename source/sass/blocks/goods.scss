@@ -76,10 +76,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
   }
 
   @media (min-width: $width-desktop) {
     padding-top: 26px;
+    padding-bottom: 22px;
   }
 }
 
@@ -102,10 +104,6 @@
   @media (min-width: $width-tablet) {
     @include font-set($font-size-reviews, $line-height-title);
   }
-
-  @media (min-width: $width-desktop) {
-    padding-bottom: 37px;
-  }
 }
 
 .goods-item__footer {
@@ -121,7 +119,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding-top: 21px;
+    padding-top: 19px;
     padding-bottom: 0;
   }
 }
@@ -133,4 +131,10 @@
   @media (min-width: $width-tablet) {
     @include font-set($font-size-label, $line-height-modal, $weight);
   }
+}
+
+.goods__icon {
+  width: 21px;
+  height: 18px;
+  background-color: red;
 }

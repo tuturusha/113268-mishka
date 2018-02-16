@@ -106,12 +106,8 @@
   @media (min-width: $width-tablet) {
     order: 5;
     width: 245px;
-    margin-left: 508px;
+    margin-left: auto;
     margin-top: -119px;
-  }
-
-  @media (min-width: $width-desktop) {
-    margin-left: 826px;
   }
 }
 
