@@ -41,6 +41,7 @@
   }
 
   @media (min-width: $width-desktop) {
+    @include font-set($font-size-huge, $line-height-huge, $weight);
     padding-left: 175px;
   }
 }

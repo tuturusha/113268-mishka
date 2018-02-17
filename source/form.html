@@ -65,7 +65,7 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="order-form__item">
+        <fieldset class="order-form__item order-form__item--color">
           <div class="order-form__wrapper order-form__wrapper--color">
             <h2 class="order-form__title">Цвет</h2>
             <ul class="order-form__list">
@@ -109,19 +109,19 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="order-form__item">
+        <fieldset class="order-form__item order-form__item--color">
           <div class="order-form__wrapper order-form__wrapper--phone">
             <h2 class="order-form__title order-form__title--phone">Тел</h2>
             <span class="order-form__icon order-form__icon--phone">
-              <input class="order-form__input order-form__input--phone" type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 XXX XX XX*">
+              <input class="order-form__input order-form__input--phone order-form__input--single" type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 XXX XX XX*">
             </span>
           </div>
         </fieldset>
-        <fieldset class="order-form__item">
+        <fieldset class="order-form__item order-form__item--color">
           <div class="order-form__wrapper order-form__wrapper--mail">
             <h2 class="order-form__title">E-mail</h2>
             <span class="order-form__icon order-form__icon--mail">
-              <input class="order-form__input" type="email" name="email" placeholder="Ваш Email*">
+              <input class="order-form__input order-form__input--single" type="email" name="email" placeholder="Ваш Email*">
             </span>
           </div>
         </fieldset>
@@ -129,8 +129,7 @@
           <div class="order-form__wrapper order-form__wrapper--textarea">
             <h2 class="order-form__title">Доп</h2>
             <div class="order-form__group">
-              <textarea class="order-form__textarea" name="goods-wishes" rows="4" required>
-                Опишите все ваши пожелания к заказу
+              <textarea class="order-form__textarea" name="goods-wishes" placeholder="Опишите все ваши пожелания к заказу">
               </textarea>
             </div>
           </div>
