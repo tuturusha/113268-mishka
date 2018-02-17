@@ -9,6 +9,7 @@
 
 .category__list {
   margin: 0 auto;
+
   @include list-style();
 
   @media (min-width: $width-tablet) {
@@ -53,6 +54,7 @@
   display: flex;
   justify-content: space-between;
   color: $white;
+
   @include font-set( $font-size-link, $line-height-title, $weight);
 }
 
