@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta name="viewport" content="width=device-width" charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
     <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2">
@@ -10,10 +11,10 @@
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <nav class="main-nav">
-          <button class="main-nav__toggle, visually-hidden" type="button">Открыть меню</button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--logo">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list main-nav__list--closed main-nav__list--no-js">
+            <li class="main-nav__item main-nav__item--active main-nav__item--logo">
               <a class="main-nav__logo" href="index.html">
                 <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
               </a>
@@ -25,10 +26,12 @@
               <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="main-nav__item main-nav__item--search">
-              <a class="main-nav__link" href="#">Поиск по сайту</a>
+              <svg class="main-nav__icon main-nav__icon--search" width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#здесь-будет-айди-иконки-потом"></use></svg>
+              <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
             </li>
             <li class="main-nav__item main-nav__item--basket">
-              <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+              <svg class="main-nav__icon main-nav__icon--basket" width="21" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#здесь-будет-айди-иконки-потом"></use></svg>
+              <a class="main-nav__link main-nav__link--basket" href="#">Корзина: пока пуста</a>
             </li>
             <li class="main-nav__item--append">
               <a class="main-nav__link" href="#">Новые поступления</a>
@@ -40,7 +43,8 @@
         </nav>
       </div>
       <div class="page-header__intro">
-        <h1 class="page-header__title">Вязание на заказ</h1>
+        <p class="page-header__text">Бесплатная доставка по России</p>
+        <h1 class="page-header__title page-header__title--catalog">Вязание на заказ</h1>
       </div>
     </header>
     <main class="page-main__order">
@@ -55,14 +59,14 @@
             <h2 class="order-form__title">Тип</h2>
             <div class="order-form__group">
               <input class="order-form__input-radio" type="radio" name="type" id="accessory" checked>
-              <label class="order-form__label-radio" for="accessory">Аксессуар для интерьера</label>
+              <label class="order-form__label-radio order-form__label-radio--checked" for="accessory">Аксессуар для интерьера</label>
               <input class="order-form__input-radio" type="radio" name="type" id="children-toy">
               <label class="order-form__label-radio" for="children-toy">Детская игрушка</label>
             </div>
           </div>
         </fieldset>
-        <fieldset class="order-form__item--color">
-          <div class="order-form__wrapper">
+        <fieldset class="order-form__item order-form__item--color">
+          <div class="order-form__wrapper order-form__wrapper--color">
             <h2 class="order-form__title">Цвет</h2>
             <ul class="order-form__list">
               <li class="order-form__color">
@@ -95,7 +99,7 @@
         <fieldset class="order-form__item">
           <div class="order-form__wrapper">
             <h2 class="order-form__title">ФИО</h2>
-            <div class="order-form__group">
+            <div class="order-form__group order-form__group--name">
               <label class="order-form__label" for="name">Имя:</label>
               <input class="order-form__input" type="text" id="name" name="name" placeholder="Введите ваше имя*">
               <label class="order-form__label" for="lastname">Фамилия:</label>
@@ -105,28 +109,27 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="order-form__item">
-          <div class="order-form__wrapper">
-            <h2 class="order-form__title">Тел</h2>
-            <div class="order-form__group--single">
-              <input class="order-form__input order-form__input--single" type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 XXX XX XX*">
-            </div>
+        <fieldset class="order-form__item order-form__item--color">
+          <div class="order-form__wrapper order-form__wrapper--phone">
+            <h2 class="order-form__title order-form__title--phone">Тел</h2>
+            <span class="order-form__icon order-form__icon--phone">
+              <input class="order-form__input order-form__input--phone order-form__input--single" type="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="+7 XXX XX XX*">
+            </span>
           </div>
         </fieldset>
-        <fieldset class="order-form__item">
-          <div class="order-form__wrapper">
+        <fieldset class="order-form__item order-form__item--color">
+          <div class="order-form__wrapper order-form__wrapper--mail">
             <h2 class="order-form__title">E-mail</h2>
-            <div class="order-form__group--single">
+            <span class="order-form__icon order-form__icon--mail">
               <input class="order-form__input order-form__input--single" type="email" name="email" placeholder="Ваш Email*">
-            </div>
+            </span>
           </div>
         </fieldset>
         <fieldset class="order-form__item">
-          <div class="order-form__wrapper">
+          <div class="order-form__wrapper order-form__wrapper--textarea">
             <h2 class="order-form__title">Доп</h2>
-            <div class="order-form__group--single">
-              <textarea class="order-form__textarea" name="goods-wishes" rows="4" required>
-                Опишите все ваши пожелания к заказу
+            <div class="order-form__group">
+              <textarea class="order-form__textarea" name="goods-wishes" placeholder="Опишите все ваши пожелания к заказу">
               </textarea>
             </div>
           </div>
@@ -139,40 +142,65 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo" href="#">Мишка</a>
+        <a class="page-footer__logo" href="#">
+          <span class="visually-hidden">Мишка</span>
+        </a>
         <div class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Инстаграм</a>
+              <a class="social__link social__link--instagram" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+                <svg class="social__icon social__icon--instagram" width="22" height="21">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#здесь-будет-айди-иконки-потом"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+              <a class="social__link social__link--facebook" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg class="social__icon social__icon--facebook" width="15" height="28">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#здесь-будет-айди-иконки-потом"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">Твиттер</a>
+              <a class="social__link social__link--twitter" href="#">
+                <span class="visually-hidden">Твиттер</span>
+                <svg class="social__icon social__icon--twitter" width="23" height="20">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#здесь-будет-айди-иконки-потом"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Aсademy</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Aсademy</span>
+            <svg class="copyright__icon" width="27" height="34">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#здесь-будет-иконкa"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
     <div class="modal modal--add-cart">
       <div class="modal__wrapper">
         <b class="modal__title">Добавить в корзину</b>
-        <span class="modal__text">Выберите размер</span>
+        <span class="modal__text">Выберите размер:</span>
         <form class="modal__form" method="post" action="https://echo.htmlacademy.ru">
-          <input class="modal-form__input-radio" type="radio" name="size" id="small" checked>
-          <label class="modal-form__label-radio" for="small">S</label>
-          <input class="modal-form__input-radio" type="radio" name="size" id="medium" checked>
-          <label class="modal-form__label-radio" for="medium">M</label>
-          <input class="modal-form__input-radio" type="radio" name="size" id="large" checked>
-          <label class="modal-form__label-radio" for="large">L</label>
-          <button class="modal__btn btn" type="submit">Добавить</button>
+          <div class="form__wrapper">
+            <input class="modal-form__input-radio visually-hidden" type="radio" name="size" id="small" checked>
+            <label class="modal-form__label-radio modal-form__label-radio--checked" for="small">S</label>
+            <input class="modal-form__input-radio visually-hidden" type="radio" name="size" id="medium" checked>
+            <label class="modal-form__label-radio" for="medium">M</label>
+            <input class="modal-form__input-radio visually-hidden" type="radio" name="size" id="large" checked>
+            <label class="modal-form__label-radio" for="large">L</label>
+            <button class="modal__btn btn" type="submit">Добавить</button>
+          </div>
         </form>
       </div>
     </div>
+    <script src="js/modal-menu.js"></script>
   </body>
 </html>

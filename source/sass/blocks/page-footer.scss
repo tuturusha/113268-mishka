@@ -10,7 +10,8 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0 100px;
+    margin: 0 auto;
+    max-width: $width-desktop;
   }
 }
 
@@ -19,7 +20,22 @@
 
   @media (min-width: $width-tablet) {
     display: block;
-    padding: 51px 0;
+    padding: 67px 0;
+    padding-right: 78px;
+
+    &--svg {
+      &:hover {
+        path {
+          fill: #46c1ae;
+        }
+      }
+
+      &:active {
+        path {
+          fill: rgba(#46c1ae, 0.3);
+        }
+      }
+    }
   }
 }
 
@@ -35,24 +51,63 @@
   @include list-style();
   display: flex;
   justify-content: space-between;
-  margin: 0 59px;
+  padding: 0 89px;
 
   @media (min-width: $width-tablet) {
     margin: 0;
+    padding: 25px 0;
   }
 }
 
 .social__item {
-  padding: 30px 0;
+  padding: 19px 0;
+  padding-top: 40px;
 
   @media (min-width: $width-tablet) {
     padding: 51px 0;
+    margin: 0 20px;
+  }
+}
+
+.social__icon {
+  background-color: red;
+
+  &--instagram {
+    width: 22px;
+    height: 21px;
+  }
+
+  &--facebook {
+    width: 15px;
+    height: 28px;
+  }
+
+  &--twitter {
+    width: 23px;
+    height: 20px;
   }
 }
 
 .copyright__text {
   @include font-set($font-size-text, $line-height-medium, $weight);
   color: $black;
+
+  @media (min-width: $width-tablet) {
+    padding-top: 20px;
+  }
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+  background-color: red;
+}
+
+.copyright__link {
+  @media (min-width: $width-tablet) {
+    padding-left: 37px;
+    padding-top: 19px;
+  }
 }
 
 .page-footer__copyright {
@@ -60,6 +115,12 @@
   justify-content: space-between;
   margin: 0 69px;
   padding: 22px 0;
+
+  &:active {
+    .copyright__text {
+      color: rgba($black, 0.3);
+    }
+  }
 
   @media (min-width: $width-tablet) {
     margin: 0;

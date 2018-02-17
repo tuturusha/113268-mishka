@@ -1,15 +1,18 @@
 .modal {
   margin-top: 50px;
+  display: none;
 }
 
 .modal__wrapper {
-  padding: 37px 30px;
   display: flex;
   flex-direction: column;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  padding: 0 23px;
 
   @media (min-width: $width-tablet) {
+    width: 566px;
     padding: 107px 53px;
-    text-align: center;
   }
 }
 
@@ -17,6 +20,8 @@
   @include font-set( $font-size-menu, $line-height-title, $weight);
   color: $black;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
   margin-bottom: 25px;
   width: 156px;
 
@@ -29,6 +34,7 @@
 .modal__text {
   @include font-set($font-size-reviews, $line-height-title);
   color: $grey;
+  margin: 0 auto;
   margin-bottom: 30px;
 
   @media (min-width: $width-tablet) {
@@ -36,9 +42,32 @@
   }
 }
 
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
 .modal-form__label-radio {
   @include font-set($font-size-label, $line-height-btn, $weight);
   color: $grey;
+  width: 82px;
+  padding: 19px 0;
+  text-align: center;
+  border: 2px solid #ececec;
+
+  &:hover {
+    border: 2px solid #c7c7c7;
+  }
+
+  &:active {
+    border: 2px solid #62d1ba;
+  }
+
+  &--checked {
+    border-color: #62d1ba;
+  }
 }
 
 .modal__btn {
@@ -47,6 +76,7 @@
   background-color: $primary-color;
   padding: 17px 50px;
   margin-top: 32px;
+  width: 100%;
 
   @media (min-width: $width-tablet) {
     padding: 20px 126px;
