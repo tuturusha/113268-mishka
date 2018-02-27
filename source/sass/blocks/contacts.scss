@@ -1,5 +1,5 @@
 .contacts {
-  padding-bottom: 56px;
+  padding-bottom: 50px;
 }
 
 .contacts__wrapper-main {
@@ -69,7 +69,7 @@
   @include font-set($font-size-reviews, $line-height-title);
   color: $grey;
   display: flex;
-  padding-bottom: 27px;
+  padding-bottom: 32px;
 
   @media (min-width: $width-tablet) {
     @include font-set($font-size-label, $line-height-title);
@@ -106,16 +106,14 @@
 }
 
 .contacts__map {
-  padding-bottom: 61px;
+  padding-bottom: 52px;
+  display: block;
+  height: 457px;
 
   @media (min-width: $width-tablet) {
     width: 100%;
     padding-bottom: 49px;
-
-    img {
-      width: 786px;
-      height: 457px;
-    }
+    margin: 0 auto;
   }
 
   @media (min-width: $width-desktop) {
@@ -130,7 +128,7 @@
   @include font-set($font-size-medium, $line-height-text, $weight);
   color: $grey;
   border: 2px solid $grey;
-  padding: 17px 50px;
+  padding: 14px 52px;
   margin-left: 29px;
 
   &:hover {

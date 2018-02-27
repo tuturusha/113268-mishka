@@ -7,7 +7,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 33px;
+  top: 31px;
   right: 31px;
   z-index: 3;
   display: block;
@@ -148,9 +148,9 @@
 
   @media (min-width: $width-desktop) {
     padding-top: 30px;
-    padding-right: 35px;
+    padding-right: 15px;
     padding-left: 30px;
-    padding-bottom: 39px;
+    padding-bottom: 36px;
     border-bottom: none;
 
     &--catalog {
@@ -166,7 +166,7 @@
       width: 112px;
       border: none;
       order: 1;
-      padding: 0 90px;
+      padding: 0 95px;
       padding-top: 30px;
     }
 
@@ -174,11 +174,13 @@
     &--basket {
       order: 1;
       border-left: 1px solid $grey-light;
+      padding-right: 75px;
     }
 
     &--basket {
       padding-top: 30px;
       padding-right: 0;
+      padding-left: 54px;
     }
 
     &--append {
@@ -199,7 +201,7 @@
   &--search {
     width: 18px;
     height: 18px;
-    top: 29px;
+    top: 37px;
     left: 32px;
   }
 
@@ -207,6 +209,14 @@
     width: 21px;
     height: 18px;
     left: 30px;
+    top: 36px;
+  }
+
+  @media (min-width: $width-desktop) {
+
+    &--search {
+      left: 55px;
+    }
   }
 }
 

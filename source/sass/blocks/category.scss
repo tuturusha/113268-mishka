@@ -18,11 +18,13 @@
 }
 
 .category__item {
-  padding: 20px 27px;
+  padding-right: 35px;
+  padding-top: 26px;
+  padding-left: 29px;
+  padding-bottom: 16px;
 
   &:hover {
     transform: translateY(-5px);
-    padding-bottom: 5px;
     box-shadow: 0 5px #46c1ae;
     background-color: #59d5bc;
   }
@@ -33,6 +35,10 @@
 
   &--dark {
     background-color: $primary-color-dark;
+    padding-top: 22px;
+    padding-left: 30px;
+    padding-bottom: 19px;
+    padding-right: 26px;
 
     &:hover,
     &:active {
@@ -54,15 +60,19 @@
   display: flex;
   justify-content: space-between;
   color: $white;
-
-  @include font-set( $font-size-link, $line-height-title, $weight);
 }
 
 .category__text {
   width: 108px;
 
+  @include font-set( $font-size-text, $line-height-modal, $weight);
+
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: $width-tablet) {
+    @include font-set( $font-size-link, $line-height-title, $weight);
   }
 }
 
